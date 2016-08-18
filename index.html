@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <!--lib files -->
+    <!-- css files-->
+    <link rel="stylesheet" href="./app/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./app/lib/css/mysite.css">
+    <!-- js files-->
+    <script src="./app/lib/js/angular.min.js"></script>
+    <script src="./app/lib/js/angular-ui-router.min.js"></script>
+    <script src="./app/lib/js/angular-messages.min.js"></script>
+    <!-- Localization support 
+     https://angular-translate.github.io/docs/#/guide/02_getting-started
+    -->
+    <script src="./app/lib/js/angular-translate.js"></script>
+    <script src="./app/lib/js/angular-translate-loader-static-files.js"></script>
+    <!--My Files-->
+    <script src="app.js"></script>
+    <!-- app controllers -->
+    <script src="./app/controller/Ctrl1.js"></script>
+    <script src="./app/controller/Ctrl2.js"></script>
+    <script src="./app/controller/Ctrl3.js"></script>
+    <!-- app constants -->
+    <script src="./app/constants/constants.js"></script>
+    <!-- services in app-->
+    <script src="./app/service/ajaxService.js"></script>
+    <!-- app directive -->
+    <script src="./app/directive/customdirective.js"></script>
+</head>
+
+<body ng-app="myapp">
+    <div ui-view class="container"></div>
+</body>
+
+</html>

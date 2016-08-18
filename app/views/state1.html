@@ -1,0 +1,28 @@
+<div class="row">
+    <form name="myform" novalidate>
+        <h1>{{ 'Main page' | translate }}</h1>
+        <div class="form-group">
+            <div class="col-lg-4 col-sm-8">
+                <input name="username" type="text" class="form-control" autocomplete="off" ng-minlength="5" ng-maxlength="50" maxlength="50" ng-model="signFormData.username" required placeholder="Enter your User Name">
+                <div ng-messages="myform.username.$error" ng-show="((myform.$submitted || !myform.username.$pristine) && myform.username.$error)" class="text-danger">
+                    <div ng-message="required"><span>User Name is reqired </span></div>
+                    <div ng-message="minlength"><span>Minimum 5 char is reqired </span></div>
+                    <div ng-message="maxlength">Message must not exceed 50 characters</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-4 col-sm-8">
+                <input name="password" type="password" class="form-control" autocomplete="off" ng-model="signFormData.password" maxlength="50" required placeholder="Enter a password">
+                <div ng-messages="myform.password.$error" ng-show="((myform.$submitted || !myform.password.$pristine) && myform.password.$error)" class="text-danger">
+                    <div ng-message="required">Password is Required</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-4 col-sm-8">
+                <button type="submit" class="btn btn-primary" ng-click="loginFormAuthencation()">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
